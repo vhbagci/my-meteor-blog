@@ -10,21 +10,20 @@ Template.home.destroyed	=	function(){
 };
 
 Template.home.helpers({
-
-		exampleHelper1:	function(){
-				return	'This text came from a helper with some <strong>HTML</strong>.';
-		},
-
-		exampleHelper2:	function(){
-				return	new	Spacebars.SafeString('This text came from a helper with some <strong>HTML</strong>.');
-		},
-
-		dataContextHelper: function(){
-			return	{
-						someText:	'This text was set using a helper of the parent template.',
-						someNested:	{
-								text:'That comes from "someNested.text"'
-						}
-				};
-		}
+	postsList: function(){
+		return  [
+		            {
+		                title:  'My Second entry',
+		                description:  'Borem  sodum  color  sit  amet,  consetetur  sadipscing elitr.',
+		                author:  'Fabian  Vogelsteller'
+		                //timeCreated:  moment().subtract(3,  'days').unix()
+		            },
+		            {
+		                title:  'My  First  entry',
+						description:  'Lorem  ipsum  dolor  sit  amet,  consetetur  sadipscing  elitr.',
+		                author:  'Fabian  Vogelsteller'
+		                //timeCreated:  moment().subtract(7,  'days').unix()
+		            }
+		        ];
+	}
 });
